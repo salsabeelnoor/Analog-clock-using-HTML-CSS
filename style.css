@@ -1,0 +1,84 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border: 10px solid rgb(158, 84, 5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: #0e0e10;
+  border-radius: 50%;
+}
+.time-dots-1 {
+  top: 15px;
+}
+.time-dots-2 {
+  right: 15px;
+}
+.time-dots-3 {
+  left: 15px;
+}
+.time-dots-4 {
+  bottom: 15px;
+}
+.time-dot-center {
+  height: 20px;
+  width: 20px;
+  background: rgb(158, 84, 5);
+}
+.time-line {
+  position: absolute;
+  background: #0e0e10;
+  border-radius: 5px;
+  z-index: -1;
+}
+.hour {
+  height: 90px;
+  width: 8px;
+  top: 60px;
+  /* transform: rotate(0deg); */
+  transform-origin: bottom;
+  animation-name: spin-hour;
+  animation-duration: 300000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin-hour {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.minute {
+  height: 120px;
+  width: 8px;
+  transform-origin: bottom;
+  top: 30px;
+  animation-name: spin-minute;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin-minute {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
